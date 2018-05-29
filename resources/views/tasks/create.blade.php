@@ -4,6 +4,7 @@
 
     <h1>新しいタスクの作成ページ</h1>
 
+
     {!! Form::model($task, ['route' => 'tasks.store']) !!}
 
         {!! Form::label('content', 'タスク:') !!}
