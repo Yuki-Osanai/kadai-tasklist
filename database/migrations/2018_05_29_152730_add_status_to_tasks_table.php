@@ -20,3 +20,4 @@ class AddStatusToTasksTable extends Migration
         });
     }
 }
+ 
