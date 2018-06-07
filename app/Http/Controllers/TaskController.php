@@ -14,13 +14,32 @@ class TaskController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+  
+    // public function index()
+    // {
+    //     $data = [];
+    //     if (\Auth::check()) {
+    //         $user = \Auth::user(); 
+    //         $task = $user->tasks()->orderBy('created_at', 'desc')->paginate(10);
+
+    //         $data = [
+    //             'user' => $user,
+    //             'task' => $task,
+    //         ]; 　
+    //         return view('tasks.index', $data);
+    //     }else {
+    //         return view('welcome');
+    //     }
+    // }
     public function index()
     {
-        $task = Task::all();
+        $user = \Auth::user(); 
+        $tasks = $user->tasks()->get();
 
         return view('tasks.index', [
-            'tasks' => $task,
-        ]);
+             'tasks' => $tasks,
+         ]);
+        
     }
 
     /**
