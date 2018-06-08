@@ -22,13 +22,3 @@
     </div>
 
 @endsection
-
-BULK INSERT teamsheet.teams
-FROM 'C:\Users\yuki.osanai\Desktop\Teamsheet.csv'
-WITH
-(
-   FIELDTERMINATOR = ',',
-   ROWTERMINATOR = '\n'
-);
-
-LOAD DATA INFILE "C:\Users\yuki.osanai\Desktop\Teamsheet.csv"  INTO TABLE teamsheet.teams FIELDS TERMINATED BY ","  LINES TERMINATED BY "\n";

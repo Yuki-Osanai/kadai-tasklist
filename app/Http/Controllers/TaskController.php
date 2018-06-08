@@ -128,7 +128,6 @@ class TaskController extends Controller
      */
     public function show($id)
     { $task = Task::find($id);
-        // print_r(\Auth::user());
         if (isset($task)){
             if (null !== \Auth::user() && \Auth::user()->id == $task->user_id){
              
@@ -149,7 +148,6 @@ class TaskController extends Controller
      */
     public function edit($id)
     { $task = Task::find($id);
-        // print_r(\Auth::user());
         if (isset($task)){
             if (null !== \Auth::user() && \Auth::user()->id == $task->user_id){
              
