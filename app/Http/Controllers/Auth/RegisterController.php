@@ -23,7 +23,7 @@ class RegisterController extends Controller
     use RegistersUsers;
 
     // 追加
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     public function __construct()
     {
